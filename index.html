@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Temperature Converter</title>
+    <style>
+        #a{
+            text-align: center;
+            font-style: bold;
+            font-size: 50px;
+            margin-top: -500px;
+        }
+        #b{
+            text-align: center;
+            margin-bottom: 80px;
+        }
+        #c{
+            text-align: center;
+            margin-bottom: 100px;
+        }
+        #d{
+            margin-top:-250px;
+            margin-left: 200px;
+        }
+    </style>
+</head>
+<body>
+    <img src="https://png.pngtree.com/thumb_back/fh260/back_our/20190628/ourmid/pngtree-simple-atmospheric-blue-temperature-needle-illustration-background-image_279280.jpg" width="1310px">
+    <div id="a">
+        Temperature Converter
+    </div>
+    <div class="container" id="b">
+        <label for="celsius">Celsius</label>
+        <input type="number" id="celsius" oninput="celToFar()">
+    </div>
+    <div class="container" id="c">
+        <label for="fahrenheit">Fahrenheit</label>
+        <input type="number" id="fahrenheit" oninput="farToCel()">
+    </div>
+    <script>
+    let celsius=document.getElementById("celsius");
+    let fahrenheit=document.getElementById("fahrenheit");
+    function celToFar()
+    {
+        let output=(parseFloat(celsius.value)*9/5)+32;
+        fahrenheit.value=parseFloat(output.toFixed(2));
+    }
+    function farToCel()
+    {
+        let output=(parseFloat(fahrenheit.value)-32)*5/9;
+        celsius.value=parseFloat(output.toFixed(2));
+        console.log(output);
+    }
+    </script>
+    <img src="https://media.tenor.com/vIymxU6p5pIAAAAM/teamupforimpact-teamup.gif" id="d">
+</body>
+</html>
